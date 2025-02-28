@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Whole Family</title>
+</head>
+<body>
+    <div id="chapter">
+        <h2>Chapter 2: Structre of a chapter</h2>
+
+        <div id = "paragraphs">
+            <p>This chapter will discuse how to write a chapter.</p>
+            <p>When writing it's important to condense all ideas of the same kind into a chpater.</p>
+            <p>The chapter acts as a parent to each paragraph.</p>
+            <p>Becuase I have nothing left to say about chapters, this chapter is over.</p>
+            <p>One more thing - <b>open the console</b> to see what's going behind the scenes!</p>
+        </div>
+    </div>
+
+    <script>
+        // Open the console to see these messages
+        var paragraph = document.getElementById("paragraphs");
+
+        // print the first child element's text
+        console.log("The first child of div paragraphs is: " + paragraphs.firstElementChild.innerHTML);
+
+        // print last child element's text
+        console.log("The last child of div paragprahs is: " + paragraphs.lastElementChild.innerHTML);
+
+        // print the Id of the parent Element Notice how we can use .id to acces the id name!
+        console.log ("The parent elemet of div paragraphs is: " + paragraphs.parentElement.id)
+
+        // get a list of all children elements of div paragraphs
+        var paragprahList = paragraphs.children;
+
+        // Loop through list of paragaphs and print their paragraphs
+        for (var i = 0; i < paragprahList.length; i++) {
+            console.log("Child " + (i + 1) + ": " + paragprahList[i].innerHTML);
+        }
+    </script>
+</body>
+</html>

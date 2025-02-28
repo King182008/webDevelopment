@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing JS/DOM Inteface</title>
+</head>
+<body>
+    <h1 id= "myHeading"></h1>
+    <p>The central theme of Mary Shelley's Frankenstein is clearly laid out in the first few pages of the text(1).</p>
+
+    <p id = "newPara"></p>
+
+    <script>
+        var header = document.getElementById("myHeading");
+        header.innerHTML = "My Essay on Frankenstein";
+
+        // appendChild()
+        var footNote = document.createElement("p")
+        footNote.innerHTML = "1. From page 5 of <i>Frankentstein</i>";
+        // add the child
+        document.body.appendChild(footNote);
+
+        // add another paragraph 
+
+        var para2 = document.getElementById("newPara")
+        para2.innerHTML = "Frankenteins main theme is the unjust treatment of those out casted by society(2).";
+
+        // add another footnote at the end of the page
+
+        var footNote2 = document.createElement("p")
+        footNote2.innerHTML = "2. From page 17 of <i>Frankenstein</i>"
+        document.body.appendChild(footNote2)
+
+        // use insertBefore()
+        var subTitle = document.createElement("h2")
+        subTitle.innerHTML = "The Central Idea"
+
+        // see newPAra variable above
+        document.body.insertBefore(subTitle, newPara)
+    </script>
+</body>
+</html>

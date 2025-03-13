@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        html, body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column;
+        }
+
+        div {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        #coordinates {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>Click on the page to see the x - y coordinates of the document</div>
+    <div id="coordinates"></div>
+
+    <script>
+        //add the event to HTML document to get FULLx, y coordinates
+        //try changing to document.body to see how that chnages what clicks are registered
+        document.addEventListener("click", getXY)
+        // document.body.addEventListener("click", getXY)
+
+        //We don't have to use the word event for an event handler
+        //Any parameter pssed ti an even handler function will work
+        //In this case, we use the parameter e as the click event.
+
+        function getXY(e) {
+            var x = "X: " + e.x;
+            var y = "Y: " + e.y;
+            var coord = document.getElementById("coordinates")
+            coord.innerHTML = x + " " + y;
+        }
+    </script>
+</body>
+</html>

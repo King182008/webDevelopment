@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Logger</title>
+</head>
+<body>
+    <h2>Key Logger</h2>
+    <p>Keys Pressed: <span id="keysPressed"></span></p>
+
+    <script>
+        // data structre  --> List/Array
+        let keys = [];
+
+        document.addEventListener("keydown", function(event) {
+            if(!keys.includes(event.key)) {
+                keys.push(event.key);
+                document.getElementById("keysPressed").textContent = keys.join(", ");
+            }
+        });
+
+        document.addEventListener("keyup", function(event) {
+            keys.filter(k => k !== event.k);
+            document.getElementById("keysPressed").textContent = keys.join(",")
+        });
+    </script>
+</body>
+</html>

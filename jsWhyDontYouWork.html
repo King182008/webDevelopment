@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    html,body{
+		       height:98%;
+		       width:99%;
+		    }
+		    #container{
+		        display:flex;
+		        flex-wrap: wrap;
+		        height:100%;
+		    }
+		    div div{
+		        width:32%;
+		        border: 1px solid black;
+		    }
+		</style>
+	</head>
+
+	<body>
+    	<div id = container>
+            <div></div>
+            <div id="top"></div>
+            <div></div>
+            <div id="left"></div>
+            <div></div>
+            <div id="right"></div>
+            <div></div>
+            <div id="bottom"></div>
+            <div></div>
+        </div>
+        
+        <script>
+            //Write your colorDown function here
+            document.body.addEventListener("keydown", colorDown);
+                
+            var top = document.getElementById("top");
+            var left = document.getElementById("left");
+            var right = document.getElementById("right");
+            var down = document.getElementById("bottom");
+                    
+            function colorDown(event) {
+                if (event.key == "ArrowUp") {
+                    top.style.backgroundColor = "purple";
+                } else if (event.key == "ArrowLeft") {
+                    left.style.backgroundColor = "purple";
+                } else if (event.key == "ArrowRight") {
+                    right.style.backgroundColor = "purple";
+                } else if (event.key == "ArrowDown") {
+                    down.style.backgroundColor = "purple";
+                }
+            }
+        </script>
+	</body>
+</html>

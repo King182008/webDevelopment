@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h2>Press any key</h2>
+    <p>Key Pressed: <span id="keyPressed"></span></p>
+    <p>Key Code: <span id="keyCode"></span></p>
+
+    <script>
+        // Capturea lister for keyup and keydown
+
+        document.addEventListener("keydown", function(event) {
+            document.getElementById("keyPressed").textContent = "key: " + event.key;
+            document.getElementById("keyCode").textContent = "Code: " + event.code;
+        })
+
+        document.addEventListener("keyup", function(event){
+            document.getElementById("keyPressed").textContent = "";
+            document.getElementById("keyCode").textContent =  "";
+        })
+    </script>
+</body>
+</html>
